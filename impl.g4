@@ -21,7 +21,10 @@ expr	: e1=expr '+' e2=expr # Addition
 	;
 
 condition : e1=expr '!=' e2=expr # Unequal
-	  // ... extend me 
+      | e1=expr '==' e2=expr #Equal
+      | e1=expr '<' e2=expr #LessThan
+      | e1=expr '>' e2=expr #MoreThan
+	  | c1=condition '&&' c2=condition # And
 	  ;  
 
 ID    : ALPHA (ALPHA|NUM)* ;
