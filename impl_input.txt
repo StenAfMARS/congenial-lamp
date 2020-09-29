@@ -9,3 +9,10 @@ while(n!=0){
 
 output result;
 
+a=10;
+b=1;
+result=1;
+
+result = a-b;
+
+output result;
