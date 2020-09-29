@@ -109,5 +109,37 @@ class Interpreter extends AbstractParseTreeVisitor<Double> implements implVisito
 	if (v1.equals(v2))  return 0.0;
 	else return 1.0;
     }
+
+	@Override
+	public Double visitLessThan(implParser.LessThanContext ctx) {
+		Double v1=visit(ctx.e1);
+		Double v2=visit(ctx.e2);
+		if (v1 < v2)  return 1.0;
+		else return 0.0;
+	}
+
+	@Override
+	public Double visitEqual(implParser.EqualContext ctx) {
+		Double v1=visit(ctx.e1);
+		Double v2=visit(ctx.e2);
+		if (v1.equals(v2))  return 1.0;
+		else return 0.0;
+	}
+
+	@Override
+	public Double visitAnd(implParser.AndContext ctx) {
+		Double v1=visit(ctx.c1);
+		Double v2=visit(ctx.c2);
+		if (v1.equals(1.0) && v2.equals(1.0))  return 1.0;
+		else return 0.0;
+	}
+
+	@Override
+	public Double visitMoreThan(implParser.MoreThanContext ctx) {
+		Double v1=visit(ctx.e1);
+		Double v2=visit(ctx.e2);
+		if (v1 > v2)  return 1.0;
+		else return 0.0;
+	}
 }
 
