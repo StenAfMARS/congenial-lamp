@@ -149,6 +149,18 @@ public interface implListener extends ParseTreeListener {
 	 */
 	void exitConstant(implParser.ConstantContext ctx);
 	/**
+	 * Enter a parse tree produced by the {@code Devision}
+	 * labeled alternative in {@link implParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void enterDevision(implParser.DevisionContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code Devision}
+	 * labeled alternative in {@link implParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void exitDevision(implParser.DevisionContext ctx);
+	/**
 	 * Enter a parse tree produced by the {@code Unequal}
 	 * labeled alternative in {@link implParser#condition}.
 	 * @param ctx the parse tree

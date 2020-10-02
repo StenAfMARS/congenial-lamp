@@ -93,6 +93,13 @@ public interface implVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitConstant(implParser.ConstantContext ctx);
 	/**
+	 * Visit a parse tree produced by the {@code Devision}
+	 * labeled alternative in {@link implParser#expr}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitDevision(implParser.DevisionContext ctx);
+	/**
 	 * Visit a parse tree produced by the {@code Unequal}
 	 * labeled alternative in {@link implParser#condition}.
 	 * @param ctx the parse tree

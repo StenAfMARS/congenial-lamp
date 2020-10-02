@@ -159,6 +159,18 @@ public class implBaseListener implements implListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterDevision(implParser.DevisionContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitDevision(implParser.DevisionContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterUnequal(implParser.UnequalContext ctx) { }
 	/**
 	 * {@inheritDoc}
