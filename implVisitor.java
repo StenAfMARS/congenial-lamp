@@ -1,4 +1,4 @@
-// Generated from C:/Users/adri-/IdeaProjects/congenial-lamp\impl.g4 by ANTLR 4.8
+// Generated from C:/Users/peter/Desktop/impl/impl\impl.g4 by ANTLR 4.8
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
 /**
@@ -85,6 +85,13 @@ public interface implVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitVariable(implParser.VariableContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code Subtraction}
+	 * labeled alternative in {@link implParser#expr}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitSubtraction(implParser.SubtractionContext ctx);
 	/**
 	 * Visit a parse tree produced by the {@code Constant}
 	 * labeled alternative in {@link implParser#expr}.

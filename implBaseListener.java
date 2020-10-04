@@ -1,4 +1,4 @@
-// Generated from C:/Users/adri-/IdeaProjects/congenial-lamp\impl.g4 by ANTLR 4.8
+// Generated from C:/Users/peter/Desktop/impl/impl\impl.g4 by ANTLR 4.8
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
@@ -142,6 +142,18 @@ public class implBaseListener implements implListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitVariable(implParser.VariableContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterSubtraction(implParser.SubtractionContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitSubtraction(implParser.SubtractionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
