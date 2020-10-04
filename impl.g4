@@ -11,14 +11,15 @@ program : c=command                      # SingleCommand
 command : x=ID '=' e=expr ';'	         # Assignment
 	| 'output' e=expr ';'            # Output
         | 'while' '('c=condition')' p=program  # WhileLoop
-        | 'for' '(' id=ID '=' n=NUM '..' e = expr ')' p=program # ForLoop
+        | 'for' '(' x=ID '=' e=expr '..' e = expr ')' p=program # ForLoop
 	;
 	
 expr	: e1=expr '+' e2=expr # Addition
     | e1=expr '-' e2=expr # Subtraction
 	| e1=expr '*' e2=expr # Multiplication
+	| e1=expr '/' e2=expr # Divison
 	| c=FLOAT     	      # Constant
-	| x=ID		      # Variable
+    | x=ID		          # Variable
 	| '(' e=expr ')'      # Parenthesis
 	;
 
