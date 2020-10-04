@@ -82,8 +82,20 @@ class Interpreter extends AbstractParseTreeVisitor<Double> implements implVisito
 	}
 	return null;
     }
-    
-    public Double visitParenthesis(implParser.ParenthesisContext ctx){
+
+	@Override
+	public Double visitForLoop(implParser.ForLoopContext ctx) {
+    	double var1 = visit(ctx.n);
+		double var2 = visit(ctx.e);
+
+    	while (var1 < var2) {
+			env.setVariable(ctx.id.getText(), var1++);
+    		visit(ctx.p);
+		}
+		return null;
+	}
+
+	public Double visitParenthesis(implParser.ParenthesisContext ctx){
 	return visit(ctx.e);
     };
     
