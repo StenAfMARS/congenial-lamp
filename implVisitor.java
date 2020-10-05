@@ -1,4 +1,4 @@
-// Generated from C:/Users/mathias/IdeaProjects/congenial-lamp\impl.g4 by ANTLR 4.8
+// Generated from C:/Users/peter/Desktop/impl/impl\impl.g4 by ANTLR 4.8
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
 /**
@@ -51,6 +51,13 @@ public interface implVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitWhileLoop(implParser.WhileLoopContext ctx);
 	/**
+	 * Visit a parse tree produced by the {@code ForLoop}
+	 * labeled alternative in {@link implParser#command}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitForLoop(implParser.ForLoopContext ctx);
+	/**
 	 * Visit a parse tree produced by the {@code Parenthesis}
 	 * labeled alternative in {@link implParser#expr}.
 	 * @param ctx the parse tree
@@ -93,12 +100,12 @@ public interface implVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitConstant(implParser.ConstantContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code Devision}
+	 * Visit a parse tree produced by the {@code Divison}
 	 * labeled alternative in {@link implParser#expr}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitDevision(implParser.DevisionContext ctx);
+	T visitDivison(implParser.DivisonContext ctx);
 	/**
 	 * Visit a parse tree produced by the {@code Unequal}
 	 * labeled alternative in {@link implParser#condition}.

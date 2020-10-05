@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/congenial-lamp.iml" filepath="$PROJECT_DIR$/congenial-lamp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/impl.iml" filepath="$PROJECT_DIR$/impl.iml" />
     </modules>
   </component>
 </project>
