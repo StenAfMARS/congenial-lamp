@@ -118,7 +118,9 @@ class Interpreter extends AbstractParseTreeVisitor<Double> implements implVisito
 	return Double.parseDouble(ctx.c.getText()); 
     }
 
-	public Double visitDivision(implParser.DivisionContext ctx){ return visit(ctx.e1)/visit(ctx.e2);	};
+	public Double visitDivision(implParser.DivisionContext ctx) { return visit(ctx.e1)/visit(ctx.e2);
+	};
+
 
     public Double visitUnequal(implParser.UnequalContext ctx){
 	Double v1=visit(ctx.e1);
