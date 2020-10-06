@@ -1,4 +1,4 @@
-// Generated from C:/Users/peter/Desktop/impl/impl\impl.g4 by ANTLR 4.8
+// Generated from C:/Users/mathias/IdeaProjects/congenial-lamp\impl.g4 by ANTLR 4.8
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
 /**
@@ -65,19 +65,19 @@ public interface implVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitParenthesis(implParser.ParenthesisContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code Addition}
-	 * labeled alternative in {@link implParser#expr}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitAddition(implParser.AdditionContext ctx);
-	/**
 	 * Visit a parse tree produced by the {@code Multiplication}
 	 * labeled alternative in {@link implParser#expr}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	T visitMultiplication(implParser.MultiplicationContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code Addition}
+	 * labeled alternative in {@link implParser#expr}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitAddition(implParser.AdditionContext ctx);
 	/**
 	 * Visit a parse tree produced by the {@code Variable}
 	 * labeled alternative in {@link implParser#expr}.
@@ -100,12 +100,12 @@ public interface implVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitConstant(implParser.ConstantContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code Divison}
+	 * Visit a parse tree produced by the {@code Division}
 	 * labeled alternative in {@link implParser#expr}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitDivison(implParser.DivisonContext ctx);
+	T visitDivision(implParser.DivisionContext ctx);
 	/**
 	 * Visit a parse tree produced by the {@code Unequal}
 	 * labeled alternative in {@link implParser#condition}.

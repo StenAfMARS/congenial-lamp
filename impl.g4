@@ -14,13 +14,14 @@ command : x=ID '=' e=expr ';'	         # Assignment
         | 'for' '(' x=ID '=' e=expr '..' e = expr ')' p=program # ForLoop
 	;
 	
-expr	: e1=expr '+' e2=expr # Addition
+expr	: '(' e=expr ')'      # Parenthesis
+    | e1=expr '*' e2=expr # Multiplication
+	| e1=expr '/' e2=expr # Division
+	| e1=expr '+' e2=expr # Addition
     | e1=expr '-' e2=expr # Subtraction
-	| e1=expr '*' e2=expr # Multiplication
-	| e1=expr '/' e2=expr # Devision
 	| c=FLOAT     	      # Constant
 	| x=ID		      # Variable
-	| '(' e=expr ')'      # Parenthesis
+
 	;
 
 condition : e1=expr '!=' e2=expr # Unequal
@@ -28,6 +29,7 @@ condition : e1=expr '!=' e2=expr # Unequal
       | e1=expr '<' e2=expr #LessThan
       | e1=expr '>' e2=expr #MoreThan
 	  | c1=condition '&&' c2=condition # And
+	  
 	  ;  
 
 ID    : ALPHA (ALPHA|NUM)* ;
